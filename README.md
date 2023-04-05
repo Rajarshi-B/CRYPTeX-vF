@@ -1,7 +1,7 @@
 # CRYPTeX-vF
 A Cryptography GUI App made as a pet project (for fun) using Python standard libraries. To be used to encrypt text and small binary files. Uses standard AES-256-PBKDF2_SHA2 with random salts and iv. On top of which a Shift Cipher is used to completely obfuscate the AES-Output and can even be converted to a One-Time-Pad if the shift cipher's key is random and length is sufficiently long. Shift Cipher wrapper is used on top because the output of AES is pseudorandom and unpredictable for random salts and iv, frequency analysis using language structure will fail.
 
-![alt text](https://github.com/Rajarshi-B/CRYPTeX-vF/blob/main/CRYPTeX_GUI.jpg?raw=true)
+![alt text](https://github.com/Rajarshi-B/CRYPTeX-vF/blob/fe3a4dd81e30e9f924b4d87b013a6dfbe7e4fa8b/CRYPTeX-vF.png)
 
 >Code is badly written :P
 
@@ -50,6 +50,6 @@ A Cryptography GUI App made as a pet project (for fun) using Python standard lib
 
 >Opening .bxenc files with some other extensions will result in errors while decrypting.
 
-Nuitka standalone executable has been created. Check "CRYPTeX-vF_Nuitka" Folder
+Nuitka standalone executable has been created. Check "CRYPTeX-vF.exe"
 
 nuitka --standalone --onefile --mingw64  --disable-console --enable-plugin=tk-inter --windows-icon-from-ico="OWL.ico" --include-data-files="OWL.ico"="OWL.ico" "CRYPTeX-vF.py"
