@@ -1,6 +1,10 @@
 # CRYPTeX-vF
-A Cryptography GUI App made as a pet project(fun) using python. Can be used to encrypt text and small binary files. Uses standard AES-256 primarily. On top of which a Shift Cipher can be used to completely obfuscate the AES-Output and even be converted to a One-Time-Pad if the shift cipher's key is random. 
-Code is badly written :P
+A Cryptography GUI App made as a pet project (for-fun) using python. To be used to encrypt text and small binary files. Uses standard AES-256-PBKDF2_SHA2 with random salts and iv. On top of which a Shift Cipher is used to completely obfuscate the AES-Output and can even be converted to a One-Time-Pad if the shift cipher's key is random and length is sufficient. Shift Cipher wrapper is used on top because the output of AES is pseudorandom and unpredicatble for random salts and iv, frequency analysis using language structure will fail.
+
+>Code is badly written :P
+
+>I am not an expert in cryptography, neither a professional programmer, use at your own risk, if your are going to use it at all :P
+
 
  In short the cipher works in the following steps
     
@@ -14,7 +18,7 @@ Code is badly written :P
     
     5) The Random 'Parameters' (AES_IV, (1)hkey and AES_Key) are concatenated with b85(enc_text_2) => b85(enc_text_2)P.
     
-    6) b(enc_text_2)P is left shifted by n_shift, n_shift is determined by frequency of 'Small letters' in it. => ENC_OUT.
+    6) b85(enc_text_2)P is left shifted by n_shift, n_shift is determined by frequency of 'Small letters' in it. => ENC_OUT.
  
     Summary:n_shift(b85(AES256_SHA2_512/256(Plain-XOR-hKey_sha3_512))+Parameters) = ENC_OUT -> Option-1 (Radio Button)
 
@@ -30,7 +34,7 @@ Code is badly written :P
  
     Summary:VigenWrap(n_shift(b85(AES256_SHA2_512/256(Plain-XOR-hKey_sha3_512))+Parameters)) = Vigen_ENC_OUT_ -> Option-2(Radio Button)
  
- Binary File mode takes the bytes from a binary/compiled file and performs operations for Vigenere Wrapper.
+ Binary File mode takes the bytes from a binary file, encodes the bytes in base85 and performs operations till (10).
 
 >All steps are symmetric and reversible.
 
@@ -43,3 +47,4 @@ Code is badly written :P
 >Use default file extensions whenever possible .xenc and .bxenc to open encrypted files.
 
 >Opening .bxenc files with some other extensions will result in errors while decrypting.
+
