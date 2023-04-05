@@ -2,7 +2,7 @@
 A Cryptography GUI App made as a pet project (for fun) using Python standard libraries. To be used to encrypt text and small binary files. Uses standard AES-256-PBKDF2_SHA2 with random salts and iv. On top of which a Shift Cipher is used to completely obfuscate the AES-Output and can even be converted to a One-Time-Pad if the shift cipher's key is random and length is sufficiently long. Shift Cipher wrapper is used on top because the output of AES is pseudorandom and unpredictable for random salts and iv, frequency analysis using language structure will fail.
 >Question: Why use a cipher on top of AES-256? If slowing down brute force is the aim then why not encrypt the same data multiple times?
 
->Answer: That can be done, but the memory requirements will increase Len(AES + IV1 + Salt2) > Len(AES(AES + IV1 + Salt) + IV2 + Salt2). Slowing down can also be done if each character of the pseudorandom output is shifted, the length remains exactly the same in that case.
+>Answer: That can be done, but the memory requirements will increase Len(AES + IV1 + Salt2) > Len(AES(AES + IV1 + Salt) + IV2 + Salt2). Slowing down can also be done if each character of the pseudorandom output is shifted, the length remains exactly the same in that case. It also keeps the door open for arbitrarily long passwords and One-Time-Pads with random keys(obviously safely protected) which if implemented correctly will make it impossible to decrypt. (Caution: Nothing is truly random and nothing can be perfectly guarded as we are humans.)
 
 ![alt text](https://github.com/Rajarshi-B/CRYPTeX-vF/blob/fe3a4dd81e30e9f924b4d87b013a6dfbe7e4fa8b/CRYPTeX-vF.png)
 
