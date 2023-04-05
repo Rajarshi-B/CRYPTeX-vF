@@ -1,6 +1,8 @@
 # CRYPTeX-vF
 A Cryptography GUI App made as a pet project (for fun) using Python standard libraries. To be used to encrypt text and small binary files. Uses standard AES-256-PBKDF2_SHA2 with random salts and iv. On top of which a Shift Cipher is used to completely obfuscate the AES-Output and can even be converted to a One-Time-Pad if the shift cipher's key is random and length is sufficiently long. Shift Cipher wrapper is used on top because the output of AES is pseudorandom and unpredictable for random salts and iv, frequency analysis using language structure will fail.
 
+![alt text](https://github.com/Rajarshi-B/CRYPTeX-vF/blob/main/CRYPTeX_GUI.jpg?raw=true)
+
 >Code is badly written :P
 
 >I am not an expert in cryptography, nor a professional programmer, use at your own risk, if you are going to use it at all :P
