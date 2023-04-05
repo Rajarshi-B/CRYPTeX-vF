@@ -58,3 +58,5 @@ Nuitka standalone executable has been created. Check "CRYPTeX-vF.exe".
 nuitka --standalone --onefile --mingw64  --disable-console --enable-plugin=tk-inter --windows-icon-from-ico="OWL.ico" --include-data-files="OWL.ico"="OWL.ico" "CRYPTeX-vF.py"
 
 >Windows Defender usually flags pyinstaller/nuitka/py2exe onefile archives as a virus.
+
+OWL.ico has been created using DALL-E-2.
