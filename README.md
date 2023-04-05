@@ -50,3 +50,6 @@ A Cryptography GUI App made as a pet project (for fun) using Python standard lib
 
 >Opening .bxenc files with some other extensions will result in errors while decrypting.
 
+Nuitka standalone executable has been created. Check "CRYPTeX-vF_Nuitka" Folder
+
+nuitka --standalone --onefile --mingw64  --disable-console --enable-plugin=tk-inter --windows-icon-from-ico="OWL.ico" --include-data-files="OWL.ico"="OWL.ico" "CRYPTeX-vF.py"
