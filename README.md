@@ -1,3 +1,8 @@
+Keeping this repository intact....
+
+Note: This is superseded by KRYPTOPATH https://github.com/Rajarshi-B/KRYPTOPATH-vF
+
+
 # CRYPTeX-vF
 A Cryptography GUI App made as a pet project using Python standard libraries. To be used to encrypt text and small binary files. Uses standard AES-256-PBKDF2_SHA2 with random salts and iv. On top of which a Shift Cipher is used to completely obfuscate the AES-Output and can even be converted to a One-Time-Pad if the shift cipher's key is random and length is sufficiently long. Shift Cipher wrapper is used on top because the output of AES is pseudorandom and unpredictable for random salts and iv, frequency analysis using language structure will fail.
 >Question: Why use a cipher on top of AES-256? If slowing down brute force is the aim then why not encrypt the same data multiple times?
